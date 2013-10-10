@@ -3,7 +3,7 @@
 *.dll
 __pycache__
 src/*.egg-info
-
+dist
 .installed.cfg
 .tox
 bin
