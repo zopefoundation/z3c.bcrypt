@@ -18,6 +18,8 @@ from zope.interface import implements
 from zope.password.interfaces import IPasswordManager
 from cryptacular import bcrypt, pbkdf2
 
+MAXLENGTH = 4096
+
 class BcryptPasswordManager(object):
     """bcrypt password manager.
     """
@@ -31,7 +33,7 @@ class BcryptPasswordManager(object):
         return self._manager.encode(password)
 
     def checkPassword(self, encoded_password, password):
-        return self._manager.check(encoded_password, password)
+        return self._manager.check(encoded_password, password[:MAXLENGTH])
 
 class PBKDF2PasswordManager(BcryptPasswordManager):
     """pbkdf2 password manager.
