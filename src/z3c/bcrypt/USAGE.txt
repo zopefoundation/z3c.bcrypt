@@ -25,7 +25,7 @@ z3c.bcrypt
 
     >>> encoded = manager.encodePassword(password)
     >>> encoded
-    '$p5k2$...'
+    u'$p5k2$...'
     >>> manager.checkPassword(encoded, password)
     True
     >>> manager.checkPassword(encoded, password + u"wrong")
