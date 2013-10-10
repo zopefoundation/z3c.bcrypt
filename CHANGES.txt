@@ -1,7 +1,7 @@
 Changelog of z3c.bcrypt
 =======================
 
-1.2 (unreleased)
+1.2 (2013-10-10)
 ----------------
 
 - Only verify the first 4096 characters of a password to prevent
