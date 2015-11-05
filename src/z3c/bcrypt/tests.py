@@ -11,11 +11,8 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-import unittest
-from zope.testing import doctest
+import doctest
+
 
 def test_suite():
-    return unittest.TestSuite((
-        doctest.DocFileSuite(
-            'USAGE.txt', optionflags=doctest.ELLIPSIS),
-            ))
+    return doctest.DocFileSuite('USAGE.txt', optionflags=doctest.ELLIPSIS)
