@@ -3,10 +3,10 @@ import os.path
 
 version = '1.3.dev0'
 
-readme = open('README.txt').read()
-changes = open('CHANGES.txt').read()
+readme = open('README.rst').read()
+changes = open('CHANGES.rst').read()
 usage = open(os.path.join(
-    'src', 'z3c', 'bcrypt', 'USAGE.txt')).read()
+    'src', 'z3c', 'bcrypt', 'USAGE.rst')).read()
 
 long_description = '\n\n'.join([readme, usage, changes, ''])
 

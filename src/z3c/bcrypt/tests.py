@@ -21,5 +21,5 @@ def test_suite():
     checker = OutputChecker([
         (re.compile("u('.*')"), r'\1'),
     ])
-    return doctest.DocFileSuite('USAGE.txt', optionflags=doctest.ELLIPSIS,
+    return doctest.DocFileSuite('USAGE.rst', optionflags=doctest.ELLIPSIS,
                                 checker=checker)
