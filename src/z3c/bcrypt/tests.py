@@ -12,7 +12,14 @@
 #
 ##############################################################################
 import doctest
+import re
+
+from zope.testing.renormalizing import OutputChecker
 
 
 def test_suite():
-    return doctest.DocFileSuite('USAGE.txt', optionflags=doctest.ELLIPSIS)
+    checker = OutputChecker([
+        (re.compile("u('.*')"), r'\1'),
+    ])
+    return doctest.DocFileSuite('USAGE.txt', optionflags=doctest.ELLIPSIS,
+                                checker=checker)

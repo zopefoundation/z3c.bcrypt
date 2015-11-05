@@ -4,7 +4,9 @@ Changelog of z3c.bcrypt
 1.2.1 (unreleased)
 ----------------
 
-- Standardize namespace __init__
+- Standardize namespace __init__.
+
+- Add support for Python 3.4.
 
 
 1.2 (2013-10-10)

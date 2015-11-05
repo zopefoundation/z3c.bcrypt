@@ -2,6 +2,7 @@ language: python
 sudo: false
 env:
     - 2.7
+    - 3.4
 install:
     - pip install tox-travis
 script:
