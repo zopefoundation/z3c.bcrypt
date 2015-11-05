@@ -1,12 +1,10 @@
 language: python
-python:
+sudo: false
+env:
     - 2.7
 install:
-    - virtualenv env
-    - env/bin/pip install -U setuptools
-    - env/bin/python bootstrap.py
-    - bin/buildout
+    - pip install tox-travis
 script:
-    - bin/test -v1
+    - tox
 notifications:
     email: false
