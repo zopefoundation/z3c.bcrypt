@@ -44,13 +44,13 @@ setup(name='z3c.bcrypt',
           'cryptacular',
           'zope.interface',
           'zope.password',
-          ],
+      ],
       extras_require = dict(
-        test = [
-            'zope.testing',
-            ],
-        ),
+          test=[
+              'zope.testing',
+          ],
+      ),
       entry_points={
-          'console_scripts': []
-          },
+          'console_scripts': [],
+      },
       )
