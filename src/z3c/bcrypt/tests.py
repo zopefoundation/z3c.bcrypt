@@ -15,11 +15,21 @@ import doctest
 import re
 
 from zope.testing.renormalizing import OutputChecker
-
+from zope.testing import cleanup
 
 def test_suite():
     checker = OutputChecker([
         (re.compile("u('.*')"), r'\1'),
     ])
-    return doctest.DocFileSuite('USAGE.rst', optionflags=doctest.ELLIPSIS,
-                                checker=checker)
+
+    def setUp(_test):
+        cleanup.setUp()
+    tearDown = setUp
+
+    return doctest.DocFileSuite(
+        'USAGE.rst',
+        optionflags=doctest.ELLIPSIS,
+        checker=checker,
+        setUp=setUp,
+        tearDown=tearDown,
+    )
