@@ -1,5 +1,6 @@
-z3c.bcrypt
-===========
+==================
+ Using z3c.bcrypt
+==================
 
     >>> from zope.interface.verify import verifyObject
     >>> from zope.password.interfaces import IPasswordManager
@@ -55,3 +56,25 @@ not be in place. XXX how to test that reliably?
     >>> incomming = '$p5k2$1000$' + 'a' * 1024 * 1024 * 100  # lot of data.
     >>> manager.checkPassword(encoded, incomming)
     False
+
+Configuration
+=============
+
+This package provides a ``configure.zcml`` which installs
+implementations of the ``IPasswordManager`` as utilities:
+
+    >>> from zope.configuration import xmlconfig
+    >>> _ = xmlconfig.string("""
+    ... <configure
+    ...    xmlns="http://namespaces.zope.org/zope">
+    ...
+    ...    <include package="z3c.bcrypt" />
+    ... </configure>
+    ... """)
+
+    >>> from zope import component
+    >>> from zope.password.interfaces import IPasswordManager
+    >>> component.getUtility(IPasswordManager, name='bcrypt')
+    <z3c.bcrypt.passwordmanager.BcryptPasswordManager object at ...>
+    >>> component.getUtility(IPasswordManager, name='pbkdf2')
+    <z3c.bcrypt.passwordmanager.PBKDF2PasswordManager object at ...>

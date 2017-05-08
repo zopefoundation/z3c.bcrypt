@@ -1,5 +1,6 @@
-z3c.bcrypt
-==========
+============
+ z3c.bcrypt
+============
 
 z3c.bcrypt provides `zope.password`_ compatible "password manager" utilities
 that use bcrypt (or alternatively pbkdf2) encoding for storing passwords.
