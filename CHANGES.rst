@@ -2,7 +2,7 @@
  Changelog of z3c.bcrypt
 =========================
 
-1.3.0 (unreleased)
+2.0.0 (2017-05-10)
 ==================
 
 - Standardize namespace __init__.
