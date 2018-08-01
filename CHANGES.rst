@@ -2,7 +2,7 @@
  Changelog of z3c.bcrypt
 =========================
 
-2.0.1 (unreleased)
+2.0.1 (2018-08-01)
 ==================
 
 - Package is deprecated in favor of `zope.password`_.
