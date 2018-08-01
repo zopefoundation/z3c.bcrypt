@@ -4,7 +4,7 @@
 
 .. warning:: z3c.bcrypt has been superseeded with the new version of
             `zope.password`_ as it now includes `bcrypt` support based on
-            the well-maintained `bcrypt`_ library. Please do no longer use
+            the well-maintained `bcrypt`_ library. Please don't use
             this package in new projects.
 
 z3c.bcrypt provides `zope.password`_ compatible "password manager" utilities
