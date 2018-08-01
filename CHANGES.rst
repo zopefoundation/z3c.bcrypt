@@ -5,8 +5,7 @@
 2.0.1 (unreleased)
 ==================
 
-- Nothing changed yet.
-
+- Package is deprecated in favor of `zope.password`_.
 
 2.0.0 (2017-05-10)
 ==================
@@ -14,7 +13,6 @@
 - Standardize namespace __init__.
 
 - Add support for Python 3.4, 3.5, 3.6 and PyPy.
-
 
 1.2 (2013-10-10)
 ================
@@ -35,3 +33,5 @@
 ================
 
 - Initial public release.
+
+.. _`zope.password`: https://pypi.org/project/zope.password/
